@@ -34,7 +34,7 @@ public static void main(String[] args) throws IOException {
 		empresa.setValorCompra(1600);
 		empresa.setStatusCompra("comfirmado");
 
-		aplicacao.setCodigo(10);
+		aplicacao.setCodigo(8);
 		aplicacao.setEmpresa(empresa);
 		aplicacao.setNome("CARRINHO");
 		aplicacao.setBotoes(5);
@@ -44,6 +44,27 @@ public static void main(String[] args) throws IOException {
 		em.persist(empresa);
 		em.persist(aplicacao);
 
+		Empresa empresa2 = new Empresa();
+		Aplicacao aplicacao2 = new Aplicacao();
+		
+		empresa2.setCodigo(2);
+		empresa2.setNome("FIAP");
+		empresa2.setCnpj("28.252.381/0001-15");
+		empresa2.setEmail("contato@fiap.com.br");
+		empresa2.setSenha("fpp172407");
+		empresa2.setDataCompra(LocalDate.now());
+		empresa2.setValorCompra(1600);
+		empresa2.setStatusCompra("comfirmado");
+
+		aplicacao2.setCodigo(7);
+		aplicacao2.setEmpresa(empresa2);
+		aplicacao2.setNome("Boletim");
+		aplicacao2.setBotoes(2);
+		aplicacao2.setEntradaDados(1);
+		aplicacao2.setLinks(0);
+		
+		em.persist(empresa2);
+		em.persist(aplicacao2);
 		
 		em.getTransaction().commit();
 
@@ -55,7 +76,7 @@ public static void main(String[] args) throws IOException {
 		
 		System.out.println(erro);
 		System.out.println("Erro para persistir os dados");
-
+		
 		}
 	}
 }
