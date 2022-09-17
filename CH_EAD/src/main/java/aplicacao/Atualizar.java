@@ -172,35 +172,36 @@ public class Atualizar {
 			System.out.print("\nCodigo da empresa que quer editar: ");
 			int codigoE = scanner.nextInt();
 			
-
-
-		System.out.println("\nOque quer editar \nNome - 1 \nCNPJ - 2 \nEmail - 3 \nSenha - 4 \nValor - 5 \nStatus - 6");
-	    int opcao = scanner.nextInt();
-		    if(opcao == 1) {
-		    	nome(codigoE);
-		    } else if (opcao == 2) {
-		    	cnpj(codigoE);
-
-		    } else if (opcao == 3) {
-                email(codigoE);
-		    } else if (opcao == 4) {
-		    	senha(codigoE);
-		    	
-		    } else if (opcao == 5) {;
-		    	valor(codigoE);
-				
-		    } else if (opcao == 6) {
-		    		status(codigoE);
-
-			} else if (opcao == 0) {
-				System.out.println("Programa finalizado");
-				break;
-				
-			}  else {
-				System.out.println("Opcao invalida");
-
-		    }
-		}
+			System.out.println("\nOque quer editar \nNome - 1 \nCNPJ - 2 \nEmail - 3 \nSenha - 4 \nValor - 5 \nStatus - 6");
+		    int opcao = scanner.nextInt();
+		    
+			    if(opcao == 1) {
+			    	nome(codigoE);
+			    	
+			    } else if (opcao == 2) {
+			    	cnpj(codigoE);
+	
+			    } else if (opcao == 3) {
+	                email(codigoE);
+	                
+			    } else if (opcao == 4) {
+			    	senha(codigoE);
+			    	
+			    } else if (opcao == 5) {;
+			    	valor(codigoE);
+					
+			    } else if (opcao == 6) {
+			    	status(codigoE);
+	
+				} else if (opcao == 0) {
+					System.out.println("Programa finalizado");
+					break;
+					
+				}  else {
+					System.out.println("Opcao invalida");
+	
+			    }
+			}
 		
 	}
 
